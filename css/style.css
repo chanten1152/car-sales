@@ -176,7 +176,7 @@ body {
   line-height: 1.8;
   color: #333;
   font-size: 20px;
-  font-family: Helvetica, "游ゴシック体", sans-serif;
+  font-family: "Copperplate", Helvetica, "游ゴシック体", sans-serif;
 }
 
 img {
@@ -192,31 +192,32 @@ ul {
   list-style: none;
 }
 
-/* General setup */
-html {
-  font-size: 10px;
-  margin: 0;
-  font-family: sans-serif;
+.bl_headerNav-above-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
 }
 
-body {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
+.el_headerNav-icon > svg {
+  width: 25px;
+  height: 22px;
+  margin-right: 4px;
 }
 
-/* Typography */
-h1 {
-  font-size: 3.2rem;
+.el_headerNav-above-li {
+  margin-right: 20px;
 }
 
-h2 {
-  font-size: 2.4rem;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  word-spacing: 0.6rem;
+.el_headerNav-above-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

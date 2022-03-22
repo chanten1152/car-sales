@@ -2,47 +2,54 @@ body {
   line-height: 1.8;
   color: #333;
   font-size: 20px;
-  font-family: Helvetica, "游ゴシック体", sans-serif;
+  font-family: "Copperplate", Helvetica, "游ゴシック体", sans-serif;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 a {
   text-decoration: none;
 }
-ul{
+
+ul {
   list-style: none;
 }
 
-
-// ウェブフォント用CSS
-/* General setup */
-
-html {
-  font-size: 10px;
-  margin: 0;
-  font-family: sans-serif;
+.bl_header {
+  &Nav-above {
+    &-ul {
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      // background-color: green;
+    }
+  }
 }
 
-body {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-}
+.el_header {
+  &Nav-icon>svg {
+    width: 25px;
+    height: 22px;
+    margin-right: 4px;
+  }
 
-/* Typography */
+  &Nav-above {
+    &-li {
+      margin-right: 20px;
+      // align-items: center;
+      // background-color: aquamarine;
+    }
 
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  word-spacing: 0.6rem;
+    &-link {
+      display: flex;
+      // align-items: center;
+      // background-color: antiquewhite;
+      color: #000;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
 }
