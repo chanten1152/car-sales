@@ -1,0 +1,88 @@
+
+.icon > svg{
+  width: 25px !important;
+  height: 22px;
+  margin-right: 4px;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.el_menu {
+  position: relative;
+  // z-index: 10000;
+  &-btn {
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    // transform: translateY(-50%);
+    right: 0px;
+    z-index: 100;
+    width: 25px;
+    background-color: antiquewhite;
+    height: 25px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &-line {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 22px;
+    height: 2px;
+    background-color: #000;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      right: 0;
+      background-color: #000;
+      width: 22px;
+      height: 2px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      right: 0;
+      background-color: #000;
+      width: 22px;
+      height: 2px;
+    }
+
+    &.is-active {
+      background-color: transparent;
+
+      &::before {
+        top: -8px;
+        transform: rotate(45deg);
+        background-color: #fff;
+      }
+
+      &::after {
+        top: -8px;
+        transform: rotate(-45deg);
+        background-color: #fff;
+      }
+    }
+  }
+
+  &-text {
+    display: none;
+
+    &.is-active {
+      display: block;
+      position: absolute;
+      top: 30%;
+      right: -14px;
+      font-size: 0.5625rem;
+      transform: scale(0.5625);
+      // transform-origin: left top;
+      color: #fff;
+    }
+  }
+}

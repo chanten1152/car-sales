@@ -18,6 +18,256 @@ ul {
   list-style: none;
 }
 
+.header.sp {
+  position: relative;
+  height: 40px;
+  padding: 10px 16px;
+  // background-color: antiquewhite;
+  // background-color: gray;
+  // display: flex;
+  justify-content: center;
+
+  &.is-active {
+    display: none;
+  }
+}
+
+.ly_headerLogo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  // margin: 0 auto;
+
+  &.is-active {
+    position: relative;
+    left: 0;
+    transform: translateX(0%);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.el_headerLogo {
+  display: block;
+  margin: 0 auto;
+  width: 71px;
+  height: 40px;
+
+  &.white {
+    display: none;
+  }
+
+  &.is-active {
+    &.black {
+      display: none;
+    }
+
+    &.white {
+      display: block;
+    }
+
+    // background-color: #000;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 77px;
+    height: 44px;
+    // fill: #fff;
+  }
+}
+
+.bl_burger {
+  display: none;
+  // margin-top: 50px;
+  padding: 0 20px;
+  background-color: #000;
+  &.is-active{
+    display: block;
+  }
+
+  &Col {
+    // background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    // max-width: 160px;
+    justify-content: space-between;
+  }
+  &Nav{
+    margin-top: 84px;
+  }
+  &Ul{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.el_burger {
+  &Item {
+    position: relative;
+  }
+  
+  &Img {
+    position: relative;
+    // width: 200px;
+  }
+  &Li{
+    // display: block;
+    margin-right: 21px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &Link{
+    color: #fff;
+  }
+
+  &Virkin {
+    &::before {
+      content: '';
+      width: 109px;
+      height: 56px;
+      background-image: url(../../img/top/burgerLogo-virkin.svg);
+      position: absolute;
+      top: 23px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      width: 129px;
+      height: 26px;
+      background-image: url(../../img/top/burgerLogo-rockstarr.svg);
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: block;
+    }
+  }
+
+  &Jeep {
+    &::before {
+      content: '';
+      width: 107px;
+      height: 53.5px;
+      background-image: url(../../img/top/burgerLogo-outletjeep.svg);
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      width: 88px;
+      height: 44px;
+      background-image: url(../../img/top/burgerLogo-jeep.svg);
+      position: absolute;
+      bottom: 27px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: block;
+    }
+  }
+
+  &Sales {
+    &::before {
+      content: '';
+      width: 82px;
+      height: 74px;
+      background-image: url(../../img/top/burgerLogo-sales.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      z-index: 100;
+      display: block;
+    }
+  }
+
+  &Starkplace {
+    &::before {
+      content: '';
+      width: 142px;
+      height: 14px;
+      background-image: url(../../img/top/burgerLogo-starkplace.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -90%);
+      z-index: 100;
+      display: block;
+    }
+  }
+
+  &Flight {
+    &::before {
+      content: '';
+      width: 146px;
+      height: 83px;
+      background-image: url(../../img/top/burgerLogo-flight.svg);
+      position: absolute;
+      top: 23px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: block;
+    }
+  }
+
+  &Beacon {
+    &::before {
+      content: '';
+      width: 154px;
+      height: 89px;
+      background-image: url(../../img/top/burgerLogo-beacon.svg);
+      position: absolute;
+      top: 17%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: 100;
+      display: block;
+    }
+  }
+}
+
+.bl_burgerIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+.el_burgerIcon{
+  &-item{
+      // background-color: red;
+      // display: block;
+      // margin-right: 20px;
+      & > svg{
+        fill: rgba(255, 255, 255, .5);
+      }
+  }
+}
+
+.el_headerMenu-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.header.pc {
+  display: none;
+}
+
 .bl_header {
   &Nav-above {
     &-ul {
@@ -30,11 +280,13 @@ ul {
 }
 
 .el_header {
-  &Nav-icon>svg {
-    width: 25px;
-    height: 22px;
-    margin-right: 4px;
-  }
+  // &Nav-icon>svg {
+  //   width: 25px;
+  //   height: 22px;
+  //   margin-right: 4px;
+  //   align-items: center;
+  //   padding-top: 3px;
+  // }
 
   &Nav-above {
     &-li {
@@ -51,5 +303,24 @@ ul {
       font-size: 15px;
       font-weight: bold;
     }
+
+    // &-text{
+    //   margin-bottom: 100px;
+    // }
+  }
+}
+
+// mainエリア
+.bl_mvTitle{
+  // text-align: center;
+}
+
+.el_mvTitle{
+  &-b{
+    font-size: 4.25rem;
+  }
+  &-s{
+    display: block;
+    font-size: 1.9375rem;
   }
 }
