@@ -1,4 +1,3 @@
-
 .icon > svg{
   width: 25px !important;
   height: 22px;
@@ -28,8 +27,8 @@
 
   &-line {
     position: absolute;
-    top: 50%;
-    right: 5%;
+    top: 75%;
+    right: 130%;
     width: 22px;
     height: 2px;
     background-color: #000;
@@ -55,6 +54,7 @@
     }
 
     &.is-active {
+      right: 0%;
       background-color: transparent;
 
       &::before {
@@ -86,3 +86,180 @@
     }
   }
 }
+
+.bl_topHeading{
+  position: relative;
+}
+.el_topHeading{
+  &-text{
+    color: #fff;
+    font-size: 2.25rem;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%);
+    // z-index: 100;
+    white-space: nowrap;
+    &::after{
+      position: absolute;
+      top: -30%;
+      left: -12%;
+      font-size: 2.8125rem;
+      color: #525050;
+      white-space: nowrap;
+      z-index: -1;
+      content: '';
+    }
+    &.carlife{
+      &::after{
+        content: 'CAR LIFE';
+      }
+    }
+    &.lifestyle{
+      &::after{
+        content: 'LIFE STYLE';
+      }
+    }
+    &.info{
+      &::after{
+        content: 'INFOMATION';
+      }
+    }
+  }
+}
+
+.bl_topContent{
+  position: relative;
+  max-width: 343px;
+  margin: 0 auto;
+  margin-top: -170px;
+  z-index: 100;
+}
+.ly_topContent-container{
+  display: flex;
+  background-color: #F2F2F2;
+  padding: 12px;
+  padding-bottom: 80px;
+}
+.bl_topContent-col{
+  position: relative;
+}
+.bl_topContent-img{
+  width: 320px;
+}
+.el_topContent{
+  &-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    // background-color: antiquewhite;
+  }
+}
+
+.el_btn{
+  text-align: center;
+  padding: 25px 0;
+  border: 3px solid #000;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.ly_footer{
+  padding: 0 16px;
+  margin-top: 96.2px;
+  // display: flex;
+  // flex-direction: column;
+  &Logo{
+    margin: 76.6px 0 81.6px 0;
+    // background-color: antiquewhite;
+    &-item{
+      display: flex;
+    }
+  }
+}
+.bl_footerLogo{
+  &-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.el_footerLogo{
+  &-item{
+    margin: 50px 0;
+    // background-color: green;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &-svg{
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    // z-index: 5000;
+    // width: 137px;
+    // background-color: red;
+    vertical-align: bottom;
+    display: flex;
+    align-items: center;
+    // height: 89px;
+    &.virkin{
+      width: 127px;
+      height: 83px;
+    }
+    &.jeepoutlet{
+      width: 137px;
+      height: 89px;
+    }
+    &.sales{
+      width: 121px;
+      height: 79px;
+    }
+    &.jeep{
+      width: 121px;
+      height: 79px;
+    }
+    &.starkplace{
+      width: 222px;
+      height: 117px;
+    }
+    &.flight{
+      width: 121px;
+      height: 79px;
+    }
+    &.beacon{
+      width: 121px;
+      height: 79px;
+    }
+    &.rockstarr{
+      width: 149px;
+      height: 97px;
+    }
+  }
+}
+.bl_footerApp{
+  margin-bottom: 74px;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: center;
+}
+.el_footerApp{
+  &-iphone{
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  &-google{
+    margin: 0 auto;
+  }
+}
+.el_footerCopyright{
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 0.5625rem;
+  transform: scale(0.5625);
+}
+

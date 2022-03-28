@@ -8,6 +8,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 a {
@@ -18,17 +19,31 @@ ul {
   list-style: none;
 }
 
-.header.sp {
-  position: relative;
-  height: 40px;
-  padding: 10px 16px;
-  // background-color: antiquewhite;
-  // background-color: gray;
-  // display: flex;
-  justify-content: center;
+.f-yu {
+  font-family: "游ゴシック体";
+}
 
-  &.is-active {
-    display: none;
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+
+  &.sp {
+
+    position: relative;
+    height: 40px;
+    padding: 10px 16px;
+    // background-color: antiquewhite;
+    // background-color: gray;
+    // display: flex;
+    justify-content: center;
+    z-index: 1000;
+
+    &.is-active {
+      display: none;
+    }
   }
 }
 
@@ -82,7 +97,8 @@ ul {
   // margin-top: 50px;
   padding: 0 20px;
   background-color: #000;
-  &.is-active{
+
+  &.is-active {
     display: block;
   }
 
@@ -93,10 +109,12 @@ ul {
     // max-width: 160px;
     justify-content: space-between;
   }
-  &Nav{
+
+  &Nav {
     margin-top: 84px;
   }
-  &Ul{
+
+  &Ul {
     display: flex;
     justify-content: center;
   }
@@ -106,19 +124,22 @@ ul {
   &Item {
     position: relative;
   }
-  
+
   &Img {
     position: relative;
     // width: 200px;
   }
-  &Li{
+
+  &Li {
     // display: block;
     margin-right: 21px;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
   }
-  &Link{
+
+  &Link {
     color: #fff;
   }
 
@@ -246,23 +267,23 @@ ul {
   padding-bottom: 50px;
 }
 
-.el_burgerIcon{
-  &-item{
-      // background-color: red;
-      // display: block;
-      // margin-right: 20px;
-      & > svg{
-        fill: rgba(255, 255, 255, .5);
-      }
+.el_burgerIcon {
+  &-item {
+
+    // background-color: red;
+    // display: block;
+    // margin-right: 20px;
+    &>svg {
+      fill: rgba(255, 255, 255, .5);
+    }
   }
 }
 
-.el_headerMenu-btn{
+.el_headerMenu-btn {
   position: absolute;
   top: 0;
   right: 0;
 }
-
 
 .header.pc {
   display: none;
@@ -310,17 +331,245 @@ ul {
   }
 }
 
+
+
 // mainエリア
-.bl_mvTitle{
-  // text-align: center;
+.bl_mv {
+  padding-top: 60px;
+  position: relative;
 }
 
-.el_mvTitle{
-  &-b{
-    font-size: 4.25rem;
+.ly_mvContainer {
+  position: relative;
+  // padding: 162px 0;
+  padding: 20px 0;
+}
+
+.bl_mvSlide {
+
+  &.pc {
+    display: none;
   }
-  &-s{
+}
+
+.el_mvImg {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bl_mvTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  // margin: 162px 0;
+}
+
+.ly_mvTitle{
+  &-life{
+    // margin-top: -20px;
+    margin-bottom: -5px;
+  }
+  &-with{
+    margin-top: -10px;
+    // margin-bottom: 30px;
+  }
+  &-virkin{
+    margin-top: -15px;
+    // margin-top: -25px;
+
+  }
+}
+.el_mvTitle {
+  &-b {
+    text-shadow: 0 0 20px black;
+    // background-color: antiquewhite;
+    font-size: 5.05rem;
+    line-height: 1.13;
+  }
+  
+  &-s {
+    text-shadow: 0 0 20px black;
     display: block;
-    font-size: 1.9375rem;
+    // background-color: antiquewhite;
+    font-size: 2.2rem;
+    line-height: 1.16;
+  }
+}
+
+
+
+.el_mvScroll {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  bottom: -71px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+
+  &-arrow {
+    position: absolute;
+    z-index: 100;
+    content: '';
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    // transform: rotate(90deg);
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 5px;
+      // transform: translateX(-50%);
+      transform: rotate(45deg);
+      width: 1px;
+      height: 15px;
+      background-color: #fff;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      right: 5px;
+      // transform: translateX(-50%);
+      transform: rotate(-45deg);
+      width: 1px;
+      height: 15px;
+      background-color: #fff;
+    }
+  }
+}
+
+// carlifeエリア
+.el_topContent {
+  // background-color: antiquewhite;
+  // color: #fff;
+  // fill: #fff;
+}
+
+.bl_topContent-col svg {
+  fill: #fff;
+  // background-color: green;
+  color: #fff;
+  width: 50%;
+}
+
+.el_topContent {
+  position: relative;
+
+  &-logo {
+    &.virkin {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+    }
+
+    &.rockstarr {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+    &.jeepoutlet {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+    }
+
+    &.jeep {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+  }
+
+  &-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 76%;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
+// infoエリア
+.bl_info>.ly_topContent-container {
+  padding-bottom: 58px;
+}
+
+.bl_topContent {
+  &-text {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 14px 14px 14px;
+  }
+}
+
+.ly_topContent {
+  &-date {
+    margin-right: 20px;
+  }
+}
+
+.el_topContent {
+  &-date {
+    font-size: 0.5625rem;
+  }
+
+  &-label {
+    font-size: 0.5625rem;
+  }
+
+  &-heading {
+    font-size: 1rem;
+    // line-height: 1.5;
+  }
+}
+
+// btnエリア
+.bl_btn {
+  &Area {
+    // background-color: antiquewhite;
+    padding: 0 16px;
+    color: #000;
+    display: flex;
+  }
+}
+
+.el_btn {
+  &News {
+    margin-right: 10px;
+  }
+}
+
+// footerエリア
+.el_footer {
+  &Logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  &Svg {
+    width: 113.5px;
+    height: 77px;
   }
 }

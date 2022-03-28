@@ -203,8 +203,8 @@ select {
 
 .el_menu-line {
   position: absolute;
-  top: 50%;
-  right: 5%;
+  top: 75%;
+  right: 130%;
   width: 22px;
   height: 2px;
   background-color: #000;
@@ -231,6 +231,7 @@ select {
 }
 
 .el_menu-line.is-active {
+  right: 0%;
   background-color: transparent;
 }
 
@@ -263,6 +264,203 @@ select {
   color: #fff;
 }
 
+.bl_topHeading {
+  position: relative;
+}
+
+.el_topHeading-text {
+  color: #fff;
+  font-size: 2.25rem;
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.el_topHeading-text::after {
+  position: absolute;
+  top: -30%;
+  left: -12%;
+  font-size: 2.8125rem;
+  color: #525050;
+  white-space: nowrap;
+  z-index: -1;
+  content: '';
+}
+
+.el_topHeading-text.carlife::after {
+  content: 'CAR LIFE';
+}
+
+.el_topHeading-text.lifestyle::after {
+  content: 'LIFE STYLE';
+}
+
+.el_topHeading-text.info::after {
+  content: 'INFOMATION';
+}
+
+.bl_topContent {
+  position: relative;
+  max-width: 343px;
+  margin: 0 auto;
+  margin-top: -170px;
+  z-index: 100;
+}
+
+.ly_topContent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F2F2F2;
+  padding: 12px;
+  padding-bottom: 80px;
+}
+
+.bl_topContent-col {
+  position: relative;
+}
+
+.bl_topContent-img {
+  width: 320px;
+}
+
+.el_topContent-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.el_btn {
+  text-align: center;
+  padding: 25px 0;
+  border: 3px solid #000;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.ly_footer {
+  padding: 0 16px;
+  margin-top: 96.2px;
+}
+
+.ly_footerLogo {
+  margin: 76.6px 0 81.6px 0;
+}
+
+.ly_footerLogo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bl_footerLogo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.el_footerLogo-item {
+  margin: 50px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.el_footerLogo-svg {
+  vertical-align: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.el_footerLogo-svg.virkin {
+  width: 127px;
+  height: 83px;
+}
+
+.el_footerLogo-svg.jeepoutlet {
+  width: 137px;
+  height: 89px;
+}
+
+.el_footerLogo-svg.sales {
+  width: 121px;
+  height: 79px;
+}
+
+.el_footerLogo-svg.jeep {
+  width: 121px;
+  height: 79px;
+}
+
+.el_footerLogo-svg.starkplace {
+  width: 222px;
+  height: 117px;
+}
+
+.el_footerLogo-svg.flight {
+  width: 121px;
+  height: 79px;
+}
+
+.el_footerLogo-svg.beacon {
+  width: 121px;
+  height: 79px;
+}
+
+.el_footerLogo-svg.rockstarr {
+  width: 149px;
+  height: 97px;
+}
+
+.bl_footerApp {
+  margin-bottom: 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.el_footerApp-iphone {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.el_footerApp-google {
+  margin: 0 auto;
+}
+
+.el_footerCopyright {
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 0.5625rem;
+  -webkit-transform: scale(0.5625);
+          transform: scale(0.5625);
+}
+
 .main {
   background-color: #F2F2F2;
 }
@@ -277,6 +475,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 a {
@@ -287,6 +486,17 @@ ul {
   list-style: none;
 }
 
+.f-yu {
+  font-family: "游ゴシック体";
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
 .header.sp {
   position: relative;
   height: 40px;
@@ -294,6 +504,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1000;
 }
 
 .header.sp.is-active {
@@ -563,12 +774,213 @@ ul {
   font-weight: bold;
 }
 
+.bl_mv {
+  padding-top: 60px;
+  position: relative;
+}
+
+.ly_mvContainer {
+  position: relative;
+  padding: 20px 0;
+}
+
+.bl_mvSlide.pc {
+  display: none;
+}
+
+.el_mvImg {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bl_mvTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.ly_mvTitle-life {
+  margin-bottom: -5px;
+}
+
+.ly_mvTitle-with {
+  margin-top: -10px;
+}
+
+.ly_mvTitle-virkin {
+  margin-top: -15px;
+}
+
 .el_mvTitle-b {
-  font-size: 4.25rem;
+  text-shadow: 0 0 20px black;
+  font-size: 5.05rem;
+  line-height: 1.13;
 }
 
 .el_mvTitle-s {
+  text-shadow: 0 0 20px black;
   display: block;
-  font-size: 1.9375rem;
+  font-size: 2.2rem;
+  line-height: 1.16;
+}
+
+.el_mvScroll {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  bottom: -71px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(0.8);
+          transform: translateX(-50%) scale(0.8);
+}
+
+.el_mvScroll-arrow {
+  position: absolute;
+  z-index: 100;
+  content: '';
+  bottom: -38px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 1px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.el_mvScroll-arrow::before {
+  position: absolute;
+  content: '';
+  bottom: -2px;
+  left: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.el_mvScroll-arrow::after {
+  position: absolute;
+  content: '';
+  bottom: -2px;
+  right: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.bl_topContent-col svg {
+  fill: #fff;
+  color: #fff;
+  width: 50%;
+}
+
+.el_topContent {
+  position: relative;
+}
+
+.el_topContent-logo.virkin {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+}
+
+.el_topContent-logo.rockstarr {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.el_topContent-logo.jeepoutlet {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+}
+
+.el_topContent-logo.jeep {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+.el_topContent-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: '';
+  width: 76%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.bl_info > .ly_topContent-container {
+  padding-bottom: 58px;
+}
+
+.bl_topContent-text {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 14px 14px 14px;
+}
+
+.ly_topContent-date {
+  margin-right: 20px;
+}
+
+.el_topContent-date {
+  font-size: 0.5625rem;
+}
+
+.el_topContent-label {
+  font-size: 0.5625rem;
+}
+
+.el_topContent-heading {
+  font-size: 1rem;
+}
+
+.bl_btnArea {
+  padding: 0 16px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.el_btnNews {
+  margin-right: 10px;
+}
+
+.el_footerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.el_footerSvg {
+  width: 113.5px;
+  height: 77px;
 }
 /*# sourceMappingURL=style.css.map */
