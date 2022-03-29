@@ -1,13 +1,18 @@
-.icon > svg{
+.icon>svg {
   width: 25px !important;
   height: 22px;
   margin-right: 4px;
   align-items: center;
   padding-top: 3px;
+
+  @include mq('lg') {
+    fill: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .el_menu {
   position: relative;
+
   // z-index: 10000;
   &-btn {
     padding: 0;
@@ -87,22 +92,35 @@
   }
 }
 
-.bl_topHeading{
+// TOPページの見出し
+.bl_topHeading {
   position: relative;
 }
-.el_topHeading{
-  &-text{
+
+.el_topHeading {
+  &.pc {
+    display: none;
+  }
+
+  max-height: 348px;
+
+  &-text {
     color: #fff;
     font-size: 2.25rem;
     position: absolute;
-    top: 31%;
+    top: 34%;
     left: 50%;
     transform: translateX(-50%);
     // z-index: 100;
     white-space: nowrap;
-    &::after{
+
+    &.info {
+      top: 35%;
+    }
+
+    &::after {
       position: absolute;
-      top: -30%;
+      top: -27%;
       left: -12%;
       font-size: 2.8125rem;
       color: #525050;
@@ -110,156 +128,338 @@
       z-index: -1;
       content: '';
     }
-    &.carlife{
-      &::after{
+
+    &.carlife {
+      &::after {
         content: 'CAR LIFE';
       }
     }
-    &.lifestyle{
-      &::after{
+
+    &.lifestyle {
+      &::after {
+        top: -26%;
         content: 'LIFE STYLE';
       }
     }
-    &.info{
-      &::after{
-        content: 'INFOMATION';
+
+    &.info {
+      &::after {
+        // font-size: 3rem;
+        // letter-spacing: .08em;
+        // left: -19%;
+        content: 'INFORMATION';
+      }
+    }
+  }
+
+  @include mq('md') {
+    &.pc {
+      display: block;
+    }
+
+    &.sp {
+      display: none;
+    }
+  }
+}
+
+// TOPページの各コンテンツ
+.ly_topContent {
+  &-container {
+    // display: flex;
+    // flex-grow: 1;
+    background-color: #F2F2F2;
+    padding: 12px;
+    padding-bottom: 67px;
+    // background-color: red;
+  }
+
+  &-col {
+    @include mq('md') {
+      display: flex;
+      // flex-wrap: wrap;
+      // flex-direction: row;
+    }
+  }
+}
+
+.bl_topContent {
+  position: relative;
+  width: 91.5%;
+  margin: 0 auto;
+  margin-top: -7.9em;
+  z-index: 100;
+
+  &-col {
+    width: 100%;
+    position: relative;
+    padding-bottom: 11px;
+  }
+
+  @include mq('md') {
+    margin-top: -2em;
+
+    &-col {
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
       }
     }
   }
 }
 
-.bl_topContent{
-  position: relative;
-  max-width: 343px;
-  margin: 0 auto;
-  margin-top: -170px;
-  z-index: 100;
-}
-.ly_topContent-container{
-  display: flex;
-  background-color: #F2F2F2;
-  padding: 12px;
-  padding-bottom: 80px;
-}
-.bl_topContent-col{
-  position: relative;
-}
-.bl_topContent-img{
-  width: 320px;
-}
-.el_topContent{
-  &-logo{
+.el_topContent {
+  &-logo {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     // background-color: antiquewhite;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-link {
+
+    &:focus,
+    &:hover {
+      opacity: .7;
+      transition: .3s;
+    }
   }
 }
 
-.el_btn{
+// 基本で使うボタン
+.el_btn {
   text-align: center;
-  padding: 25px 0;
+  padding: 20px 0;
   border: 3px solid #000;
   width: 100%;
   border-radius: 4px;
   background-color: #fff;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background-color: #000;
+    color: #fff;
+    transition: .3s;
+  }
 }
 
-.ly_footer{
+// フッター
+.ly_footer {
   padding: 0 16px;
   margin-top: 96.2px;
+
   // display: flex;
   // flex-direction: column;
-  &Logo{
-    margin: 76.6px 0 81.6px 0;
+  &Logo {
+    margin: 60px 0 45px;
+
     // background-color: antiquewhite;
-    &-item{
+    &-item {
       display: flex;
     }
   }
 }
-.bl_footerLogo{
-  &-container{
+
+.bl_footer {
+  &Logo {
+    &-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+  &App {
+    margin-bottom: 60px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    justify-content: center;
   }
-}
-.el_footerLogo{
-  &-item{
-    margin: 50px 0;
-    // background-color: green;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  &-svg{
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%,-50%);
-    // z-index: 5000;
-    // width: 137px;
-    // background-color: red;
-    vertical-align: bottom;
-    display: flex;
-    align-items: center;
-    // height: 89px;
-    &.virkin{
-      width: 127px;
-      height: 83px;
-    }
-    &.jeepoutlet{
-      width: 137px;
-      height: 89px;
-    }
-    &.sales{
-      width: 121px;
-      height: 79px;
-    }
-    &.jeep{
-      width: 121px;
-      height: 79px;
-    }
-    &.starkplace{
-      width: 222px;
-      height: 117px;
-    }
-    &.flight{
-      width: 121px;
-      height: 79px;
-    }
-    &.beacon{
-      width: 121px;
-      height: 79px;
-    }
-    &.rockstarr{
-      width: 149px;
-      height: 97px;
+
+  @include mq('md') {
+    &App {
+      flex-direction: row;
     }
   }
-}
-.bl_footerApp{
-  margin-bottom: 74px;
-  display: flex;
-  flex-direction: column;
-  // flex-wrap: wrap;
-  justify-content: center;
-}
-.el_footerApp{
-  &-iphone{
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  &-google{
-    margin: 0 auto;
-  }
-}
-.el_footerCopyright{
-  padding-bottom: 15px;
-  text-align: center;
-  font-size: 0.5625rem;
-  transform: scale(0.5625);
 }
 
+.el_footer {
+  &Logo {
+    &-item {
+      margin: 10px 0;
+      // background-color: green;
+      justify-content: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    &-svg {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%,-50%);
+      // z-index: 5000;
+      // width: 137px;
+      // background-color: red;
+      vertical-align: bottom;
+      display: flex;
+      align-items: center;
+
+      // justify-content: center;
+      // height: 89px;
+      &.virkin {
+        width: 127px;
+        width: 80%;
+        height: 83px;
+      }
+
+      &.jeepoutlet {
+        width: 137px;
+        width: 80%;
+        height: 89px;
+      }
+
+      &.sales {
+        width: 121px;
+        width: 140%;
+        height: 84px;
+        // height: 10%;
+      }
+
+      &.jeep {
+        width: 121px;
+        width: 80%;
+        height: 79px;
+      }
+
+      &.starkplace {
+        width: 222px;
+        width: 70%;
+        height: 117px;
+      }
+
+      &.flight {
+        width: 121px;
+        // width: 80%;
+        height: 79px;
+      }
+
+      &.beacon {
+        width: 121px;
+        width: 150%;
+        height: 80px;
+      }
+
+      &.rockstarr {
+        width: 149px;
+        width: 75%;
+        height: 97px;
+      }
+    }
+  }
+
+  &App {
+    &-iphone {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    &-google {
+      margin: 0 auto;
+    }
+  }
+
+  &Copyright {
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 0.5625rem;
+    transform: scale(0.5625);
+  }
+
+  @include mq('md') {
+    &App {
+      &-iphone {
+        margin: 0;
+        margin-right: 16px;
+      }
+
+      &-google {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.topArrow {
+  // display: none;
+  // position: relative;
+
+  @include mq('md') {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &-link {
+      width: 78px;
+      height: 78px;
+      display: block;
+      background-color: #2B2B2B;
+      border: 2px solid #000;
+
+      &:focus,
+      &:hover {
+        opacity: .7;
+        // background-color: #fff;
+        transition: .2s;
+        border: 2px solid #000;
+      }
+    }
+
+    &-line {
+      // display: block;
+      position: absolute;
+      z-index: 100;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // transform: rotate(90deg);
+      width: 1px;
+      height: 30px;
+      background-color: #fff;
+      &::before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: 5px;
+        // transform: translateX(-50%);
+        transform: rotate(-45deg);
+        width: 1px;
+        height: 15px;
+        background-color: #fff;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: -2px;
+        right: 5px;
+        // transform: translateX(-50%);
+        transform: rotate(45deg);
+        width: 1px;
+        height: 15px;
+        background-color: #fff;
+      }
+    }
+  }
+}
