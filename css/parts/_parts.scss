@@ -114,10 +114,6 @@
     // z-index: 100;
     white-space: nowrap;
 
-    &.info {
-      top: 35%;
-    }
-
     &::after {
       position: absolute;
       top: -27%;
@@ -137,12 +133,14 @@
 
     &.lifestyle {
       &::after {
-        top: -26%;
+        top: -65%;
         content: 'LIFE STYLE';
       }
     }
 
     &.info {
+      top: 48%;
+
       &::after {
         // font-size: 3rem;
         // letter-spacing: .08em;
@@ -161,6 +159,35 @@
       display: none;
     }
   }
+
+  @include mq('lg') {
+    &-text {
+      top: 35%;
+      font-size: 2.8rem;
+      &.info{
+        top: 35%;
+      }
+      &::after {
+        top: -60%;
+        left: -35%;
+        font-size: 5rem;
+      }
+    }
+  }
+  @include mq('xl') {
+    &-text {
+      top: 48.5%;
+      font-size: 2.8rem;
+      &.info{
+        top: 48%;
+      }
+      &::after {
+        top: -60%;
+        left: -35%;
+        font-size: 5rem;
+      }
+    }
+  }
 }
 
 // TOPページの各コンテンツ
@@ -174,11 +201,18 @@
     // background-color: red;
   }
 
-  &-col {
-    @include mq('md') {
+  @include mq('md') {
+    &-col {
       display: flex;
       // flex-wrap: wrap;
       // flex-direction: row;
+    }
+  }
+
+  @include mq('lg') {
+    &-container {
+      padding: 20px;
+      padding-bottom: 70px;
     }
   }
 }
@@ -207,6 +241,11 @@
         margin-right: 0;
       }
     }
+  }
+
+  @include mq('lg') {
+    margin-top: -4.75em;
+    width: 88%;
   }
 }
 
@@ -238,16 +277,27 @@
   text-align: center;
   padding: 20px 0;
   border: 3px solid #000;
+  max-width: 230px;
   width: 100%;
   border-radius: 4px;
   background-color: #fff;
   text-decoration: none;
+
+  &News {
+    margin-right: 10px;
+  }
 
   &:focus,
   &:hover {
     background-color: #000;
     color: #fff;
     transition: .3s;
+  }
+
+  @include mq('lg') {
+    &News {
+      margin-right: 23px;
+    }
   }
 }
 
@@ -264,6 +314,17 @@
     // background-color: antiquewhite;
     &-item {
       display: flex;
+    }
+  }
+
+  @include mq('lg') {
+    margin-top: 125px;
+    &Logo{
+      margin: 0;
+    }
+    &-content.wrapper {
+      display: flex;
+      margin-bottom: 75px;
     }
   }
 }
@@ -288,6 +349,11 @@
   @include mq('md') {
     &App {
       flex-direction: row;
+    }
+  }
+  @include mq('lg'){
+    &App{
+      margin-bottom: 13px;
     }
   }
 }
@@ -398,6 +464,17 @@
       }
     }
   }
+  @include mq('lg') {
+    &App{
+      // margin-bottom: 10px;
+    }
+    &Logo {
+      &-item {
+        width: 25%;
+        // background-color: red;
+      }
+    }
+  }
 }
 
 .topArrow {
@@ -437,6 +514,7 @@
       width: 1px;
       height: 30px;
       background-color: #fff;
+
       &::before {
         position: absolute;
         content: '';

@@ -3,18 +3,18 @@ body {
   color: #333;
   font-size: 20px;
   font-family: "Copperplate", Helvetica, "游ゴシック体", sans-serif;
-  position: relative;
-  &::before{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateY(-50%);
-    content: '';
-    width: 1px;
-    background-color: red;
-    height: 10000px;
-    z-index: 100000;
-  }
+  // position: relative;
+  // &::before{
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateY(-50%);
+  //   content: '';
+  //   width: 1px;
+  //   background-color: red;
+  //   height: 8000px;
+  //   z-index: 100000;
+  // }
 }
 
 img {
@@ -95,7 +95,7 @@ ul {
 .bl_header {
   &Nav {
     &-above {
-      padding: 8px 0;
+      padding: 2.5px 0;
       background-color: #000;
       &-ul {
         display: flex;
@@ -113,7 +113,7 @@ ul {
     &-below {
       &-ul{
         display: flex;
-        padding: 30px 0;
+        padding: 20px 0;
         & li:last-child{
           margin-right: 0;
         }
@@ -195,8 +195,8 @@ ul {
     &.pc{
       // display: flex;
       position: absolute;
-      top: 15%;
-      left: 5%;
+      top: 10%;
+      left: 8%;
     }
   }
 
@@ -213,6 +213,7 @@ ul {
         }
       }
       &-link{
+        font-size: 1.125rem;
         color: #000;
         // display: inline-block;
         // margin-right: 30px;
@@ -482,22 +483,32 @@ ul {
     }
   }
   @include mq('lg'){
-    padding-top: 150px;
+    padding-top: 116px;
+    &Slide{
+      &.wrapper{
+        max-width: 1240px;
+        // width: 100%;
+      }
+    }
   }
 }
 
 .ly_mvContainer {
   position: relative;
   // padding: 162px 0;
-  padding: 20px 0;
+  padding: 20px 0 23px 0;
+  // width: 100%;
 }
 
 .el_mvImg {
   // position: absolute;
   // top: 0;
   // left: 0;
+  // max-width: 1200px;
   width: 100%;
   object-fit: cover;
+  // overflow: hidden;
+  box-sizing: border-box;
 }
 
 .bl_mvTitle {
@@ -515,16 +526,25 @@ ul {
     // margin-top: -20px;
     margin-bottom: -5px;
   }
-
   &-with {
     margin-top: -10px;
     // margin-bottom: 30px;
   }
-
   &-virkin {
     margin-top: -15px;
     // margin-top: -25px;
-
+  }
+  @include mq('lg'){
+    &-life{
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    &-with{
+      margin-top: 0px;
+    }
+    &-virkin{
+      margin-top: 10px;
+    }
   }
 }
 
@@ -543,9 +563,16 @@ ul {
     font-size: 2.2rem;
     line-height: 1.16;
   }
+  @include mq('lg'){
+    &-b{
+      font-size: 6.5rem;
+      line-height: .5;
+    }
+    &-s{
+      font-size: 3rem;
+    }
+  }
 }
-
-
 
 .el_mvScroll {
   position: absolute;
@@ -667,6 +694,35 @@ ul {
     height: 1px;
     background-color: #fff;
   }
+  @include mq('lg'){
+    &-logo{
+      &.rockstarr{
+        top: 77%;
+      }
+      &.jeepoutlet{
+        width: 48%;
+        left: 48.5%;
+      }
+      &.jeep{
+        top: 77%;
+        left: 48.5%;
+        width: 54%;
+      }
+      &.sales{
+        top: 47%;
+        width: 62%;
+      }
+    }
+    &-line{
+      top: 47%;
+    }
+  }
+}
+// lifestyleエリア
+.bl_lifestyle>.ly_topContent-container {
+  @include mq('lg') {
+    margin-top: -98px;
+  }
 }
 
 // infoエリア
@@ -675,6 +731,9 @@ ul {
 
   @include mq('md') {
     padding-bottom: 80px;
+  }
+  @include mq('lg') {
+    padding-bottom: 60px;
   }
 }
 
@@ -686,6 +745,9 @@ ul {
       // display: flex;
       flex-wrap: wrap;
     }
+    // @include mq('lg'){
+
+    // }
   }
 }
 
@@ -694,6 +756,16 @@ ul {
     @include mq('md') {
       // max-width: 32%;
       width: calc(50% - 10px);
+    }
+    @include mq('lg') {
+      // margin-bottom: 10px;
+      // max-width: 32%;
+      width: calc(32.92% - 10px);
+    }
+    @include mq('xl') {
+      // margin-bottom: 10px;
+      // max-width: 32%;
+      width: calc(33% - 10px);
     }
   }
 }
@@ -716,6 +788,40 @@ ul {
         }
 
         &:nth-of-type(2n) {
+          // padding: 20px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include mq('lg') {
+    &-text{
+      padding-bottom: 35px;
+    }
+    &-col {
+      &.info {
+        &:nth-of-type(2n) {
+          // padding: 20px;
+          margin-right: 20px;
+        }
+        &:nth-of-type(3n) {
+          // padding: 20px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include mq('xl') {
+    &-text{
+      padding-bottom: 35px;
+    }
+    &-col {
+      &.info {
+        &:nth-of-type(2n) {
+          // padding: 20px;
+          margin-right: 20px;
+        }
+        &:nth-of-type(3n) {
           // padding: 20px;
           margin-right: 0;
         }
@@ -752,12 +858,7 @@ ul {
     padding: 0 16px;
     color: #000;
     display: flex;
-  }
-}
-
-.el_btn {
-  &News {
-    margin-right: 10px;
+    justify-content: center;
   }
 }
 
@@ -767,13 +868,24 @@ ul {
 }
 .el_footer {
   &Logo {
+    width: 33%;
     display: flex;
-    justify-content: center;
+    margin-right: 20px;
+    // justify-content: center;
   }
 
   &Svg {
     // width: 113.5px;
     height: 77px;
     width: 100%;
+  }
+  @include mq('lg'){
+    &Logo{
+      align-items: center;
+    }
+    &Svg{
+      height: 120px;
+
+    }
   }
 }
